@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai</title>
+    <thead><h1 align="center">DATA PEGAWAI PT.KAPUR BAGUS</h1></thead>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 7px;
+            text-align: center;
+        }
+        th {
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+
+<table id="pegawaiTable">
+    <thead>
+        <tr>
+            <th>Nama Pegawai</th>
+            <th>Jabatan</th>
+            <th>Status</th>
+            <th>Gaji Pokok</th>
+            <th>Tunjangan Jabatan</th>
+            <th>BPJS</th>
+            <th>Tunjangan Keluarga</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="namaPegawai">Ridwan</td>
+            <td id="jabatan">Manager</td>
+            <td id="status">Menikah</td>
+            <td id="gajiPokok"></td>
+            <td id="tunjanganJabatan"></td>
+            <td id="bpjs"></td>
+            <td id="tunjanganKeluarga"></td>
+  
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">Total Gaji : </td>
+            <td id="totalGajiFooter"></td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    // Ambil elemen tabel dan data pegawai
+    var namaPegawai = document.getElementById("namaPegawai").innerText;
+    var jabatan = document.getElementById("jabatan").innerText;
+    var status = document.getElementById("status").innerText;
+    var gajiPokok = 0;
+
+    // Hitung gaji
+    if (jabatan === "Manager") {
+        gajiPokok = 15000000;
+    } else if (jabatan === "Asisten Manager") {
+        gajiPokok = 10000000;
+    } else if (jabatan === "Staff") {
+        gajiPokok = 5000000;
+    }
+
+    var tunjanganJabatan = 0.15 * gajiPokok;
+    var bpjs = 0.10 * gajiPokok;
+    var tunjanganKeluarga = (status === "Menikah") ? (0.20 * gajiPokok) : 0;
+    var totalGaji = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+    // Isi data ke dalam tabel
+    document.getElementById("gajiPokok").innerText = gajiPokok.toLocaleString('id-ID');
+    document.getElementById("tunjanganJabatan").innerText = tunjanganJabatan.toLocaleString('id-ID');
+    document.getElementById("bpjs").innerText = bpjs.toLocaleString('id-ID');
+    document.getElementById("tunjanganKeluarga").innerText = tunjanganKeluarga.toLocaleString('id-ID');
+    document.getElementById("totalGajiFooter").innerText = totalGaji.toLocaleString('id-ID');
+</script>
+
+</body>
+</html>

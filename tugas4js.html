@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>TUGAS 4 JS EKSTERNAL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: purple;
+        }
+        form {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input[type="text"], input[type="button"] {
+            width: calc(100% - 12px);
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="button"] {
+            cursor: pointer;
+            background-color: purple;
+            color: #fff;
+            border: none;
+        }
+        input[type="button"]:hover {
+            background-color: darkpurple;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: purple">INPUT PEGAWAI</h1>
+    <form  style="text-align: center;"    id="input-pegawai">
+        <label for="">Nama Pegawai :</label>
+        <input type="text" name="nama" id="nama">
+        <br><br>
+        <label for="">Jabatan :</label>
+        <select name="jabatan" id="jabatan"></select>
+        <br><br>
+        <label for="">Status:</label>
+        <select name="status" id="status"></select>
+        <br><br>
+        <input type="button" value="Submit" onclick="datapegawai()">
+    </form>
+    <script src="tgs4js/js4tgs.js"></script>
+</body>
+</html>

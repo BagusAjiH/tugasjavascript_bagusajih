@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <h2 style="font-size: larger;">Letakan kursor ke masing-masing kotak untuk melihat gambar dan tekan untuk suara</h2>
+    <div id="div1">
+        Beruang Madu
+    </div>
+    <div id="div2">
+        Lumba-lumba
+    </div>
+    <div id="div3">
+        Burung hantu
+    </div>
+
+    <!-- Elemen audio untuk suara -->
+    <audio id="sound1" src="sound/beruang.mp3"></audio>
+    <audio id="sound2" src="sound/lumbalumba.mp3"></audio>
+    <audio id="sound3" src="sound/burunghantu.mp3"></audio>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#div1").mouseover(function(){
+                $(this).css({
+                    background: "url('https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/01/29/3734817873.jpg')"
+                });
+            });
+            $("div").mouseout(function(){
+                $(this).css({
+                    background : "green"
+                });
+            });
+            $("#div2").mouseover(function(){
+                $(this).css({
+                    background : "url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Anim1018_-_Flickr_-_NOAA_Photo_Library.jpg/800px-Anim1018_-_Flickr_-_NOAA_Photo_Library.jpg')"
+                });
+            });
+            $("#div3").mouseover(function(){
+                $(this).css({
+                    background : "url('https://jatengprov.go.id/wp-content/uploads/2020/02/BURHAN-KLATEN.jpg')"
+                });
+            });
+            
+            // Event click untuk memainkan suara dari file lokal
+            $("#div1").click(function(){
+                var sound = document.getElementById("sound1");
+                sound.play();
+            });
+            $("#div2").click(function(){
+                var sound = document.getElementById("sound2");
+                sound.play();
+            });
+            $("#div3").click(function(){
+                var sound = document.getElementById("sound3");
+                sound.play();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    margin: auto;
+    background-color: palevioletred;
+}
+
+#div1, #div2, #div3{
+    display: inline-block;
+    margin: auto;
+    width: 60%;
+    color: aquamarine;
+    border: 10px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background: gray;
+    height: 400px;
+    cursor: pointer;
+    font-size: larger;
+    font: bold 24px Arial, sans-serif;
+}

@@ -1,0 +1,45 @@
+.carousel-item img {
+    margin: 0 auto; 
+    max-height: 800px; 
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: black; 
+    font-family: Arial, sans-serif; 
+    font-weight: bold;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: black !important;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: rgba(10, 230, 28, 0.7) !important; 
+}
+
+.carousel-item img:hover {
+    opacity: 0.9; 
+    transition: opacity 0.2s ease; 
+}
+
+footer {
+    background-color: grey;
+    color:white; 
+    position: fixed; 
+    bottom: 10; 
+    width: 100%; 
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer p {
+    color: white; 
+    font-size: 12px; 
+    line-height: 1.3; 
+}
+
+
+
+
